@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="main-container">
+        <img src="map.png" class="container-bg" />
+
+        <div class="buttons">
+            <div class="link-button">
+                <img src="map.png" class="link-button-bg" />
+                <a href="page2.html">ссылка</a>
+            </div>
+
+            <div class="link-button">
+                <a href="index.html">ссылка</a>
+                </div>
+            <div class="link-button">3</div>
+        </div>
+
+
+        <div class="svitok-container">
+            <div class="svitok">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur natus nostrum atque at dolorem, minima laborum? Suscipit, quo aliquam pariatur odio ex amet commodi aliquid sunt quis fuga eius qui!
+            </div>
+           
+        </div>
+
+
+    </div>
+
+
+    <style>
+        body{
+            margin:0;
+        }
+        .main-container{
+            width: 100vw;
+            height: 100vh;
+        }
+        .container-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .link-button{
+            padding: 20px 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .link-button-bg{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .svitok-container{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-right: 100px;
+            padding-left: 100px;
+            box-sizing: border-box;
+        }
+        .svitok{
+            width: 300px;
+            height: 500px;
+            background-color:white;
+            padding:30px;
+            margin-top: -150px;
+        }
+    </style>
+
+
+</body>
+</html>

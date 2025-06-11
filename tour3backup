@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="anima.js"></script>
+</head>
+<body>
+
+    <div class="buttons2 step3 hide">
+        <div class="q2">
+            <img src="scroll 1.png" class="scroll2" />
+            <div class="q2-text">
+                   Деян.18:23-21:16, 52-58 гг.. <br/>Третье миссионерское путешествие <br/> с Тимофеем и другими. 
+            </div>
+        </div>
+        <div>
+        <img src="mouse.gif" class="mouse" />
+        </div>
+    </div>
+    
+   <div class="cloud-container">
+    
+    <div id="cloudanim" class="cloudanim"></div>
+    </div>
+
+     <div class="scene">
+        <div>
+            <div id="first">
+                <img id="path1" class="fill container-bg-top" src="" style="z-index: -4; display: none;" />
+            </div>
+        </div>
+</div>  
+
+    <div class="main-container">
+        <img src="map3.png" class="container-bg container-bg-top"  />
+        <div class="buttons">
+            <div class="link-button">
+                    <img src="arrow.png" class="link-button-bg" />
+                    <a href="page2.html" class="button-text">Третье миссионерское путешествиe</a>
+                </div>
+                <div class="zoom">
+                    <div>
+                        <img src="minus.png" class="zoom-pic"/>
+                    </div>
+                    <div>
+                        <img src="plus.png" class="zoom-pic"/>
+                    </div>
+            </div>
+        </div>
+
+
+            
+        
+
+
+        <div class="info">
+                <div class="svitok hide">
+                        <img src="scroll.png" class="svitok-bg" />
+                        <div class="close-but"></div>
+                        <div class="svitok-content">
+                            <div class="header">
+                            Селевкия
+                            </div>
+                            <div class="text">
+                                
+                            </div>
+                        </div>
+                </div>   
+                
+
+        <div class="info-buttons">
+            <div class="town">
+                <img src="untown.png" class="info-button" data-hover="town.png" />
+            </div>
+            <div class="paul">
+                <img src="unpaul.png" class="info-button" data-hover="paul.png" />
+            </div>
+            <div class="rome">
+                <img src="unrome.png" class="info-button" data-hover="rome.png" />
+            </div>
+        </div>
+        </div>
+        
+
+
+    </div>
+
+    <script>
+           
+
+
+  const step0 = new Step({frames:[
+        "cloud100.png",
+        "cloud101.png",
+        "cloud102.png",
+        "cloud103.png",
+        "cloud104.png",
+        "cloud105.png",
+        "cloud106.png",
+        "cloud107.png",
+        "cloud108.png",
+        "cloud109.png",
+    ], onUpdate:(frame) => {
+        document.querySelector(".cloudanim").style.backgroundImage = "url(img/clouds/" + frame + ")"
+        if(step1.isFinished()){
+             document.querySelector(".cloudanim").style.display = "none"
+        }
+        else {
+            document.querySelector(".cloudanim").style.display = "block"
+        }
+    }})
+
+    step0.addChildren(step1)
+
+
+ let svitokContentIndex = 0
+
+  let allSvitokContents = [
+            [
+                // Антиохия в сирии
+                `<p><br> Антиохия-на-Оронте (совр. Антакья, Турция), второй после Иерусалима центр раннего христианства. Город располагался у подножия горы Сильпий на реке Оронт, примерно в 30 км от Средиземного моря. Такое географическое положение делало его важным узлом между Востоком и Западом Римской империи. Через Антиохию проходили торговые пути из Месопотамии и Персии, соединяясь с морскими маршрутами через порт Селевкия.
+
+                <br> Во времена апостола Павла Антиохия насчитывала около 500 000 жителей, уступая по численности лишь Риму и Александрии. Население было этнически и культурно разнообразным: греки, римляне, сирийцы, евреи и переселенцы с востока. Это многообразие отразилось и в религиозной жизни, и в социальной структуре города. В таких культурно-гибридных средах легче всего возникали новые формы религиозной общности.
+
+
+                <br> До прихода христианства в Антиохии преобладали эллинистические и восточные культы. Наиболее почиталась Атаргатис — сиро-финикийская богиня плодородия, а также Зевс и Аполлон. Римская власть поощряла религиозный плюрализм, пока он не угрожал имперскому порядку.
+
+                <br> Антиохия была городом с развитой инфраструктурой. Она славилась мощёными улицами, общественными банями, театрами и акведуками. Центральная улица, протянувшаяся через весь город, была облицована мрамором и освещалась факелами, что делало её уникальной для того времени. Город был административным центром римской провинции Сирия, в нём находился римский гарнизон, а также резиденция проконсула.
+
+                <br> Антиохия также была важным интеллектуальным центром. Здесь действовали школы риторики, философии и — позднее — христианского богословия.
+                </p>`,
+
+                `2`,
+
+                `3`
+            ],
+            [
+                `<p>111</p>`,
+                `2222`,
+                `3333`
+            ]
+        ]
+
+        let allSvitokHeaders = [
+             [
+                `Антиохия <br> в Сирии`,
+                `<br>После обращения Павел прибыл в Антиохию по приглашению Варнавы (Деян. 11:25–26). Здесь он в течение года наставлял общину, состоявшую из иудеев и язычников. В Антиохии ученики впервые получили имя «христиане» (Деян. 11:26). Позже Павел и Варнава были посланы отсюда церковью в первое миссионерское путешествие (Деян. 13:1–3). Антиохийская церковь стала первой моделью многоэтничного христианского сообщества. В ранних христианских общинах большое значение имел фактор социальной разнородности.
+
+<br>В Антиохии произошел конфликт между Павлом и Петром по поводу общения с необрезанными (Гал. 2:11–14). Это стало основой для послания к Галатам, где Павел отстаивает идею оправдания через веру, а не через дела Закона (Гал. 2:16).
+`,
+                `33333`,
+            ],
+             [
+                `Селевкия_____`,
+                `22222_____`,
+                `33333____`,
+            ],
+        ]
+
+
+
+        let svitokContents
+        let svitokHeaders
+        setContent(0)
+
+//шаги с пунктирами
+     const step3 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+    ], onUpdate:(frame) => {
+        setContent(0)
+        document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.1/" + frame
+
+    }})
+
+    const step4 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.2/" + frame
+    }})
+
+    const step5 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.3/" + frame
+    }})
+
+        const step6 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+        "07.png",
+        "08.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.4/" + frame
+    }})
+
+            const step7 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.5/" + frame
+    }})
+            const step8 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.6/" + frame
+    }})
+
+            const step9 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+        "015.png",
+        "016.png",
+        "017.png",
+        "018.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.7/" + frame
+    }})
+
+            const step10 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+        "015.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.8/" + frame
+    }})
+
+            const step11 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+        "015.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.9/" + frame
+    }})
+
+            const step12 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+        "07.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.10/" + frame
+    }})
+
+            const step13 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.11/" + frame
+    }})
+
+            const step14 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.12/" + frame
+    }})
+
+
+            const step15 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.13/" + frame
+    }})
+
+
+            const step16 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.14/" + frame
+    }})    
+
+
+            const step17 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.15/" + frame
+    }})
+
+            const step18 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.16/" + frame
+    }})
+
+            const step19 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+        "015.png",
+        "016.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.17/" + frame
+    }})
+
+            const step20 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+        "015.png",
+        "016.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.18/" + frame
+    }})
+
+
+            const step21 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+        "07.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.19/" + frame
+    }})
+
+            const step22 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.20/" + frame
+    }})
+
+                const step23 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.21/" + frame
+    }})
+
+                    const step24 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.22/" + frame
+    }})
+
+            const step25 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+        "015.png",
+        "016.png",
+        "017.png",
+        "018.png",
+        "019.png",
+        "020.png",
+        "021.png",
+        "022.png",
+        "023.png",
+        "024.png",
+        "025.png",
+        "026.png",
+        "027.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.23/" + frame
+    }})
+
+    const step26 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.24/" + frame
+    }})
+
+        const step27 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.25/" + frame
+    }})
+
+        const step28 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.26/" + frame
+    }})
+
+                const step29 = new Step({frames:[
+        "000.png",
+        "001.png",
+        "002.png",
+        "003.png",
+        "004.png",
+        "005.png",
+        "006.png",
+        "007.png",
+        "008.png",
+        "009.png",
+        "010.png",
+        "011.png",
+        "012.png",
+        "013.png",
+        "014.png",
+        "015.png",
+        "016.png",
+        "017.png",
+        "018.png",
+        "019.png",
+        "020.png",
+        "021.png",
+        "022.png",
+        "023.png",
+        "024.png",
+        "025.png",
+        "026.png",
+        "027.png",
+        "028.png",
+        "029.png",
+        "030.png",
+        "031.png",
+        "032.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.27/" + frame
+    }})
+
+            const step30 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.28/" + frame
+    }})
+
+                const step31 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.29/" + frame
+    }})
+
+                    const step32 = new Step({frames:[
+        "00.png",
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png",
+        "07.png",
+    ], onUpdate:(frame) => {
+         setContent(1)
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/3.30/" + frame
+    }})
+ //это если мне понадобиться одновременная анимация
+   // step4.addChildren(step1)
+
+    // сюда добавить новый шаг
+ Scroller.init([step0, step1, step3, step4, step5, step6, step7, step8, step9, step10, step11, step12, step13, step14, step15, step16, step17, step18, step19, step20, step21, step22, step23, step24, step25, step26, step27, step28, step29, step30, step31, step32,])
+ Scroller.active = true
+
+
+ function setContent(index){
+    svitokContents = allSvitokContents[index]
+    svitokHeaders = allSvitokHeaders[index]
+ }
+
+       
+       
+
+    </script>
+    <script src="svitok.js"></script>
+
+
+    <style>
+
+        .hide {
+            display: none;
+        }
+        body{
+            margin:0;
+            overflow: hidden;
+        }
+        .main-container{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Облака покрывают весь экран */
+
+        /* скролл с текстом */
+        
+        .buttons2 {
+           
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           left:50%;
+           top: 50%;
+           transform: translate(-50%, -50%);
+           display: flex;
+           flex-direction: column;
+           gap: 5vw;
+           justify-content:center;
+           align-items: center;
+           z-index: 10000;
+       }
+        .scroll2{
+            height: 11.2432291666667vw;
+            display: flex;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+        .q2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .q2-text{
+            font-size: 1.04166666666667vw;
+            padding-top: 4vw;
+            position: relative;
+            text-decoration:none;
+            color: black;
+            text-align: center;
+            width: 22.65625vw;   
+            font-family: Atyp Text;
+        }
+       
+        .mouse{
+            width: 5.93072916666667vw;
+
+        }
+        
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .cloudanim {
+            position: absolute;
+            width: 100vw; /* или оставить без фиксированной ширины */
+            height: 100vh; /* высота по всему контейнеру */
+            background-image: url('img/clouds/cloud100.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1000;
+            top:0;
+            left:0;
+        }
+            
+        .container-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+            
+        }
+
+
+        .container-bg-top{
+            object-position: top center;
+        }
+        
+        .buttons {
+            display: flex;
+            padding-left: 3.0729vh;
+            padding-top: 3.0729vh;
+            /* padding-bottom: 3.0729vh; */
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            
+        }
+        .link-button{
+            padding: 0.31vw 1.04vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;    
+        }
+
+        .link-button-bg{
+            position: absolute;
+            left:0;
+            top:0;
+            height: 1.718vw;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .button-text{
+            font-family: Cera pro;
+            font-size: 0.833333vw;
+            text-decoration:none;
+            color: black;
+        }
+        
+        .zoom{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 3.0729vh;
+            gap: 2.5vh;
+        }
+        
+        .zoom-pic{
+            width: 2.5vw;
+        }
+
+        .info{
+            position: absolute;
+            right: 2vw;
+            top:0;
+            bottom:0;
+            padding-right: 3.02vh;
+            /* top: 50%; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+            margin-left: -4vw;
+            
+        }
+        .info-button{
+            position: relative;
+            width: 6.56vw;
+            
+        }
+        
+
+        .svitok-bg{
+            position: absolute;
+            left:0;
+            top:0;
+            height: 48vw;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .svitok{
+            top: 1vw;
+            width: 34.2vw;
+            height: 50.73vw;
+            position: relative;
+        }
+
+        .close-but{
+            width: 2vw;
+            height: 2vw;
+            background-color: red;
+            position: absolute;
+            right:3vw;
+            top:2vw;
+            opacity: 0;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .svitok-content{
+            position: absolute;
+            padding-top: 7.92vw;
+            padding-left: 7.92vw;
+            padding-right:  7.92vw;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-sizing: border-box;
+            
+            
+        }
+
+        .svitok-content .text{
+            position: relative;
+            height: 27vw;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            padding-bottom: 2rem;
+            box-sizing: border-box;
+        }
+        .svitok-content .text::-webkit-scrollbar{
+            display: none;
+        }
+
+
+        .svitok-content::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 3vw;
+            left: 7.92vw;
+            right: 7.92vw;
+            bottom:-0.5vw;
+            background:linear-gradient(to bottom, rgba(251, 250, 243, 0), rgba(251, 250, 243, 1));
+        }
+        .header{
+            font-family: Cera pro;
+            font-size: 2.083vw;
+            font-weight: bold;
+        }
+        .text{
+            font-family: Atyp text;
+            font-size: 0.83333vw;
+        }
+
+        .town:hover, .paul:hover, .rome:hover{
+            cursor: pointer;
+        }
+
+         .scene {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100vw;
+            height:100vh;
+        }
+
+        .fill {
+            width:100vw;
+            height:100vh;
+            object-fit: cover;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+
+
+</body>
+</html>

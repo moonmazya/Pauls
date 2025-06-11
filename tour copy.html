@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <div class="cloud-container">
+    <div id="cloudanim" class="cloudanim"></div>
+    </div>
+
+    <div class="main-container">
+        <img src="map1.png" class="container-bg" />
+
+        <div class="buttons">
+            <div class="link-button">
+                <img src="arrow.png" class="link-button-bg" />
+                <a href="page2.html" class="button-text">Первое миссионерское путешествие</a>
+            </div>
+            <div class="zoom">
+                <div>
+                    <img src="minus.png" class="zoom-pic"/>
+                </div>
+                <div>
+                    <img src="plus.png" class="zoom-pic"/>
+                </div>
+        </div>
+        </div>
+
+
+            
+        
+
+
+        <div class="info">
+                <div class="svitok hide">
+                        <img src="scroll.png" class="svitok-bg" />
+                        <div class="close-but"></div>
+                        <div class="svitok-content">
+                            <div class="header">
+                            Селевкия
+                            </div>
+                            <div class="text">
+                                
+                            </div>
+                        </div>
+                </div>   
+                
+
+        <div class="info-buttons">
+            <div class="town">
+                <img src="untown.png" class="info-button" data-hover="town.png" />
+            </div>
+            <div class="paul">
+                <img src="unpaul.png" class="info-button" data-hover="paul.png" />
+            </div>
+            <div class="rome">
+                <img src="unrome.png" class="info-button" data-hover="rome.png" />
+            </div>
+        </div>
+        </div>
+        
+
+
+    </div>
+
+    <script>
+           
+const cloudElement = document.getElementById('cloudanim');
+
+let frameWidthVW; // ширина кадра в vw
+const totalFrames = 100; // число кадров
+
+function updateFrameSize() {
+    const windowWidthPx = window.innerWidth;
+    // Ширина изображения в px
+    const imageWidthPx = 1920;
+
+    
+    frameWidthVW = (imageWidthPx / windowWidthPx) * 100; // в vw
+}
+
+
+window.addEventListener('load', () => {
+    updateFrameSize();
+    animateClouds();
+});
+window.addEventListener('resize', () => {
+    updateFrameSize();
+    animateClouds();
+});
+
+// Анимация
+function animateClouds() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = Math.min(scrollY / docHeight, 1);
+
+    const currentFrame = Math.floor(progress * (totalFrames -1));
+
+    
+    cloudElement.style.backgroundPosition = `-${currentFrame * frameWidthVW}vw 0`;
+}
+
+
+window.addEventListener('scroll', animateClouds);
+
+
+
+        const svitokContents = [
+            `<p>Селевкия Пиерия — древний город в Сирии, построен Селевком I Никатором в 6км к северу от устья реки Оронт. Селев-кия была одним из городов «сирийс-кого тетраполиса» (он включал в себя ещё Антиохию Сирийскую, Апамею Сирийскую и Лаодикию). Селевкия служила военным и торговым портом Антиохии Великой, расположенной выше по Оронту. Селевкию Пиерию также, чтоб отличать от других Селевкий, называли Селевкией у моря, так как это был главный порт Сирии. Отсюда апостол Павел с Варнавой и Марком отпра-вился в своё первое миссионерское путешествие.</p>
+            <p>Селевкия Пиерия — древний город в Сирии, построен Селевком I Никатором в 6км к северу от устья реки Оронт. Селев-кия была одним из городов «сирийс-кого тетраполиса» (он включал в себя ещё Антиохию Сирийскую, Апамею Сирийскую и Лаодикию). Селевкия служила военным и торговым портом Антиохии Великой, расположенной выше по Оронту. Селевкию Пиерию также, чтоб отличать от других Селевкий, называли Селевкией у моря, так как это был главный порт Сирии. Отсюда апостол Павел с Варнавой и Марком отпра-вился в своё первое миссионерское путешествие.</p>
+            <p>Селевкия Пиерия — древний город в Сирии, построен Селевком I Никатором в 6км к северу от устья реки Оронт. Селев-кия была одним из городов «сирийс-кого тетраполиса» (он включал в себя ещё Антиохию Сирийскую, Апамею Сирийскую и Лаодикию). Селевкия служила военным и торговым портом Антиохии Великой, расположенной выше по Оронту. Селевкию Пиерию также, чтоб отличать от других Селевкий, называли Селевкией у моря, так как это был главный порт Сирии. Отсюда апостол Павел с Варнавой и Марком отпра-вился в своё первое миссионерское путешествие.</p>
+            
+            
+            `,
+            `2`,
+            `3`
+        ]
+        const svitokHeaders = [
+            `Селевкия`,
+            `22222`,
+            `33333`,
+        ]
+
+        let currentButIndex = -1
+        let buts = [
+            ".town",
+            ".paul",
+            ".rome"
+        ]
+
+
+        const svitokTextElement = document.querySelector(".svitok-content .text")
+        const svitokHeaderElement = document.querySelector(".svitok-content .header")
+
+        function setSvitokText(index, element){
+            svitokTextElement.innerHTML = svitokContents[index]
+            svitokHeaderElement.innerHTML = svitokHeaders[index]
+            const hoverImage = element.dataset.hover
+            element.src = hoverImage
+            if(currentButIndex >= 0){
+                console.log(document.querySelector(buts[currentButIndex] + " img").dataset.default)
+                document.querySelector(buts[currentButIndex] + " img").src = document.querySelector(buts[currentButIndex] + " img").dataset.default
+            }
+            document.querySelector(".svitok").classList.remove("hide")
+            currentButIndex = index
+        }
+       
+
+        for(let i = 0; i < buts.length; i++){
+            document.querySelector(buts[i] + " img").addEventListener("click", function(e){setSvitokText(i,e.target)})
+            document.querySelector(buts[i] + " img").dataset.default = document.querySelector(buts[i] + " img").src
+        }
+        document.querySelector(".svitok .close-but").addEventListener("click", () => document.querySelector(".svitok").classList.add("hide"))
+        
+
+       // setSvitokText(0, document.querySelector(".town img"))
+
+
+    </script>
+
+
+    <style>
+
+        .hide {
+            display: none;
+        }
+        body{
+            margin:0;
+            overflow: hidden;
+        }
+        .main-container{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Облака покрывают весь экран */
+        
+        
+        
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .cloudanim {
+            position: absolute;
+            width: 100vw; /* или оставить без фиксированной ширины */
+            height: 100vh; /* высота по всему контейнеру */
+            background-image: url('clouds/cloud100.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1000;
+            top:0;
+            left:0;
+        }
+            
+        .container-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+            
+        }
+        
+        .buttons {
+            display: flex;
+            padding-left: 3.0729vh;
+            padding-top: 3.0729vh;
+            /* padding-bottom: 3.0729vh; */
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            
+        }
+        .link-button{
+            padding: 0.31vw 1.04vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;    
+        }
+
+        .link-button-bg{
+            position: absolute;
+            left:0;
+            top:0;
+            height: 1.718vw;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .button-text{
+            font-family: Cera pro;
+            font-size: 0.833333vw;
+            text-decoration:none;
+            color: black;
+        }
+        
+        .zoom{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 3.0729vh;
+            gap: 2.5vh;
+        }
+        
+        .zoom-pic{
+            width: 2.5vw;
+        }
+
+        .info{
+            position: absolute;
+            right: 2vw;
+            top:0;
+            bottom:0;
+            padding-right: 3.02vh;
+            /* top: 50%; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+            margin-left: -4vw;
+            
+        }
+        .info-button{
+            position: relative;
+            width: 6.56vw;
+            
+        }
+        
+
+        .svitok-bg{
+            position: absolute;
+            left:0;
+            top:0;
+            height: 48vw;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .svitok{
+            top: 1vw;
+            width: 34.2vw;
+            height: 50.73vw;
+            position: relative;
+        }
+
+        .close-but{
+            width: 2vw;
+            height: 2vw;
+            background-color: red;
+            position: absolute;
+            right:3vw;
+            top:2vw;
+            opacity: 0;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .svitok-content{
+            position: absolute;
+            padding-top: 7.92vw;
+            padding-left: 7.92vw;
+            padding-right:  7.92vw;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            
+            
+        }
+
+        .svitok-content .text{
+            position: relative;
+            height: 30vw;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            padding-bottom: 3rem;
+            box-sizing: border-box;
+        }
+        .svitok-content .text::-webkit-scrollbar{
+            display: none;
+        }
+
+
+        .svitok-content::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 3vw;
+            left: 7.92vw;
+            right: 7.92vw;
+            bottom:-0.5vw;
+            background:linear-gradient(to bottom, rgba(251, 250, 243, 0), rgba(251, 250, 243, 1));
+        }
+        .header{
+            font-family: Cera pro;
+            font-size: 2.083vw;
+            font-weight: bold;
+        }
+        .text{
+            font-family: Atyp text;
+            font-size: 0.83333vw;
+        }
+
+        .town:hover, .paul:hover, .rome:hover{
+            cursor: pointer;
+        }
+    </style>
+
+
+</body>
+</html>
