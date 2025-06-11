@@ -288,8 +288,9 @@
         "путь пунктир5.png",
         "путь пунктир6.png",
         "путь пунктир7.png",
-    ], onUpdate:(frame) => {
-        setContent(0)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(0)
+        if(isLast) setContent(1)
         document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/1/" + frame
 
@@ -303,8 +304,9 @@
         "путь пунктир04.png",
         "путь пунктир05.png",
         "путь пунктир06.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+          if(isFirst) setContent(1)
+          if(isLast) setContent(2)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/2/" + frame
     }})
@@ -318,8 +320,9 @@
         "путь пунктир35.png",
         "путь пунктир36.png",
         "путь пунктир37.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+         if(isFirst) setContent(2)
+          if(isLast) setContent(3)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/3/" + frame
     }})
@@ -336,8 +339,12 @@
         "путь пунктир408.png",
         "путь пунктир409.png",
         "путь пунктир410.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+        //надо будет вот хто вставить isFirst, isLast
+        // if(isFirst) setContent(3)
+         // if(isLast) setContent(4)
+    ], onUpdate:(frame, isFirst, isLast) => {
+         if(isFirst) setContent(3)
+          if(isLast) setContent(4)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4/" + frame
     }})
@@ -356,8 +363,9 @@
         "путь пунктир510.png",
         "путь пунктир511.png",
         "путь пунктир512.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+         if(isFirst) setContent(4)
+          if(isLast) setContent(5)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/5/" + frame
     }})

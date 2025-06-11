@@ -72,7 +72,7 @@ class Step {
     }
     update(){
         if(this.frames.length){
-           this.onUpdate(this.frames[this.frame])
+           this.onUpdate(this.frames[this.frame], this.frame === 0, this.frame === this.frames.length-1)
         }
     }
 }

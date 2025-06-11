@@ -111,13 +111,16 @@
             document.querySelector(".cloudanim").style.display = "block"
         }
     }})
-
+       const smooth = []
+    for(let i = 0; i < 150; i++){
+        smooth.push(i)
+    }
     const step1 = new Step({fps:100,frames:smooth, onUpdate:(frame) => {
         document.querySelector(".step1").style.opacity = Math.max( 0, 1 - frame/30 )
 
         if(frame > 140){
-            document.querySelector(".step0").classList.remove("hide")
-            Scroller.active = false
+            //document.querySelector(".step1").classList.remove("hide")
+           // Scroller.active = false
             localStorage.setItem("visited", "1")
         }
     }})
@@ -752,7 +755,7 @@
     <style>
 
         .hide {
-            display: none;
+            display: none !important;
         }
         body{
             margin:0;

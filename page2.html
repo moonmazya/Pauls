@@ -123,35 +123,35 @@
             <div class="closerome-button"></div>
             <div  class="rome-menu">
                     <div class="rome-points">
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="0">
                             <img src="romebutt.png" class="menu-bg" />
                             От Республики к Империи
                         </div>
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="1">
                             <img src="romebutt.png" class="menu-bg" />
                             Политическая структура Римской империи 
                         </div>
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="2">
                             <img src="romebutt.png" class="menu-bg" />
                             Римское право
                         </div>
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="3">
                             <img src="romebutt.png" class="menu-bg" />
                             Римская армия
                         </div>
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="4">
                             <img src="romebutt.png" class="menu-bg" />
                             Римские дороги
                         </div>
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="5">
                             <img src="romebutt.png" class="menu-bg" />
                             Судебная система и апелляция к кесарю
                         </div>
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="6">
                             <img src="romebutt.png" class="menu-bg" />
                             Законы, религия и новые движения
                         </div>
-                        <div class="rome-point">
+                        <div class="rome-point" data-index="7">
                             <img src="romebutt.png" class="menu-bg" />
                             Cеть городов
                         </div>
@@ -159,10 +159,15 @@
                     </div>
             <div class="rome-svitok">
                     <img src="rome-sv.png" class="romesv" />
-                    <div class="rome-text">
-            </div>
-                
-
+                    <div class="close-but"></div>
+                    <div class="rome-text svitok-content">
+                            <div class="header">
+                            Селевкия
+                            </div>
+                            <div class="text">
+                                12312312 12 312 3123 123 
+                            </div>
+                    </div>
                 </div>
                 </div>
                 
@@ -191,6 +196,33 @@
 
 
     <script>
+
+
+const romeSvitokContent = [
+    {header:"111", text:"1111_22222"},
+    {header:"2222", text:"2222_22222"},
+    {header:"333", text:"3333_22222"},
+]
+
+document.querySelector(".rome-text .header").innerHTML = romeSvitokContent[0].header
+document.querySelector(".rome-text .text").innerHTML = romeSvitokContent[0].text
+
+const romeButtons = document.querySelectorAll("[data-index]")
+romeButtons.forEach( button => {
+    const index = button.dataset.index
+    button.addEventListener("click", () => {
+        document.querySelector(".rome-text .header").innerHTML = romeSvitokContent[index].header
+        document.querySelector(".rome-text .text").innerHTML = romeSvitokContent[index].text
+    })
+} )
+
+ document.querySelector(".rome-svitok .close-but").addEventListener("click", () => {
+     let menuContainer = document.querySelector(".menu-but")
+document.querySelector(".rome-container").classList.add("hide")
+menuContainer.classList.remove("hide")
+})
+
+
 // для открывания окошек
         let helppic = document.querySelector(".helppic")
         helppic.addEventListener("click", () => {
@@ -210,11 +242,20 @@
             let menuContainer = document.querySelector(".menu-but")
             let helpOknoContainer = document.querySelector(".help-okno-container")
             if(helpOknoContainer.classList.contains("hide")){
-                romeOknoContainer.classList.remove("hide")
-                romeOknoContainer.classList.add("fadein")
-                menuContainer.classList.add("hide")
+                 
+                if(romeOknoContainer.classList.contains("hide")){
+                    romeOknoContainer.classList.remove("hide")
+                    romeOknoContainer.classList.add("fadein")
+                    menuContainer.classList.add("hide")
+                   
+                }
+                else 
+                {
+                   
+                    romeOknoContainer.classList.add("hide")
+                    menuContainer.classList.remove("hide")
+                }
             }
-            
         })
 
         let closeBut = document.querySelector(".close-button")
@@ -468,6 +509,8 @@ if (logoButton) {
         .unrome2{
             height: 5vw;
             cursor: pointer;
+            position: relative;
+            z-index:100;
         }
 
 
@@ -478,22 +521,23 @@ if (logoButton) {
             display: flex;
             position: absolute;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             top: 0;
             /* top: 50%;
            transform: translate(-50%, -50%); */
-            right: 0;
-            padding-right: 15vw;
-            padding-top: 9%;
+            left: 0;
+            width: 100%;
+            height: 100%;
             gap: 5vw;
             z-index: 100;
+            box-sizing: border-box;
             
         }
 
         .rome-points{
             display: flex;
             flex-direction: column;
-            gap: 4vw;
+            gap: 2vw;
         }
 
         .rome-point{
@@ -505,10 +549,71 @@ if (logoButton) {
             color: black;
             font-family: Atyp Text;
             font-size: 1.04166666666667vw;
+            height: 3.6vw;
         }
 
         .romesv{
+             position: absolute;
+            left:0;
+            top:0;
+            object-fit: cover;
+            z-index: -1;
             height: 46vw;
+        }
+
+         .rome-svitok{
+            top: 2vw;
+            width: 34.2vw;
+            height: 50.73vw;
+            position: relative;
+        }
+
+        .svitok-content{
+            position: absolute;
+            padding-top: 3vw;
+            padding-left: 2.92vw;
+            padding-right:  12.92vw;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            box-sizing: border-box;
+            
+            
+        }
+
+        .svitok-content .text{
+            position: relative;
+            height: 27vw;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            padding-bottom: 2rem;
+            box-sizing: border-box;
+        }
+        .svitok-content .text::-webkit-scrollbar{
+            display: none;
+        }
+
+
+        .svitok-content::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 3vw;
+            left: 2.92vw;
+            right: 12.92vw;
+            bottom:-0.5vw;
+            background:linear-gradient(to bottom, rgba(251, 250, 243, 0), rgba(251, 250, 243, 1));
+        }
+        .header{
+            font-family: Cera pro;
+            font-size: 2.083vw;
+            font-weight: bold;
+        }
+        .text{
+            font-family: Atyp text;
+            font-size: 0.83333vw;
         }
 
         .closerome-button{
@@ -520,6 +625,18 @@ if (logoButton) {
             right: 16.5vw;
             z-index: 1000;
             opacity: 0;
+            cursor: pointer;
+        }
+
+        .close-but{
+            width: 2vw;
+            height: 2vw;
+            background-color: red;
+            position: absolute;
+            right:9.3vw;
+            top:2vw;
+            opacity: 0;
+            z-index: 10;
             cursor: pointer;
         }
 
@@ -701,7 +818,7 @@ if (logoButton) {
         }
 
         .menu-bg{
-            width: 26.1859375vw;
+            width: 26vw;
             z-index: -1;
             object-fit: cover;
             position: absolute;
