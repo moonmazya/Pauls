@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="anima.js"></script>
+</head>
+<body>
+    
+    <div class="scene">
+        <div>
+            <div id="first">
+                <img id="clouds3" class="fill" src="/img/first_screen/clouds3.png" style="z-index: -4;" />
+                <img id="fon" class="fill" src="/img/fon.jpeg" style="z-index: -5;" />
+                <img id="plan1" class="fill" src="/img/first_screen/1plan.png" style="z-index: -1;" />
+                <img id="plan2" class="fill" src="/img/first_screen/2plan.png" style="z-index: -3;" />
+                <img id="clouds2" class="fill" src="/img/first_screen/clouds2.png" style="z-index: -3;" />
+                <img id="plan3" class="fill" src="/img/first_screen/3plan.png" style="z-index: -4;" />
+                <img id="plan4" class="fill" src="/img/first_screen/4plan.png" style="z-index: -2;" />
+                <img id="clouds" class="fill" src="/img/first_screen/clouds.png" style="z-index: -1;" />
+
+            </div>
+        </div>
+</div>  
+
+<!-- 0 -->
+    <div class="main-container">
+        <img src="map.jpeg" class="container-bg" />
+
+        <div class="buttons step1">
+            <img src="logotype.png" class="logotype" />
+                <a href="#" class="link-button">
+                    Начать
+                </a>
+                
+        </div>
+        
+
+ <!-- 1 -->
+        <div class="buttons2 step2 hide">
+            <div class="q1">
+                <img src="scroll 1.png" class="scroll1" />
+                <div class="q1-text">
+                    Как так вышло, что христианство выросло из иудейской секты в распространенную религию Римской империи?
+                </div>
+            </div>
+            <a href="#" class="link-button">
+                    Как же так?
+            </a>
+            
+        </div>
+
+<!-- 2 -->
+        <div class="buttons2 step3 hide">
+            <div class="q2">
+                    <img src="scroll 2.png" class="scroll2" />
+                    <div class="q2-text">
+                        Предлагаю вам в этом разобраться
+                    </div>
+                </div>
+                <!-- <div class="link-button2">
+                    <a href="index.html" class="start3">Как скажешь
+                    </a>
+                </div> -->
+                <div>
+                    <img src="mouse.gif" class="mouse" />
+                </div>
+                
+            </div>
+        </div>
+
+
+<!-- menu -->
+        <div class="menu step4 hide">
+            <div class="logo">
+                        <img src="logo.png" class="logo"/>
+            </div>
+            <div class="menu-but">
+                    
+                    <a href="tour.html" class="menu-text">
+                        <img src="menu.png" class="menu-bg" />
+                        Первое миссионерское путешествие
+                    </a>
+
+                    <a href="tour2.html" class="menu-text">
+                        <img src="menu.png" class="menu-bg" />
+                        Второе миссионерское путешествие
+                    </a>
+
+                    <a href="tour3.html" class="menu-text">
+                        <img src="menu.png" class="menu-bg" />
+                        Третье миссионерское путешествие
+                    </a>
+
+                    <a href="tour4.html" class="menu-text">
+                        <img src="menu.png" class="menu-bg" />
+                            Путешествие в Рим
+                        </a>
+            </div>
+                <!-- <div class="link-button2">
+                    <a href="index.html" class="start3">Как скажешь
+                    </a>
+                </div> -->
+               
+                
+            </div>
+        </div>
+
+
+
+        <div class="navigator">
+            <img src="unrome2.png" class="unrome2" />
+            <div class="help">
+                <img src="help.png" class="helppic"/>
+                <a href="index.html">
+                </a>
+            </div>
+        </div>
+
+<!-- рим -->
+        <div class="rome-container hide">
+            <div class="closerome-button"></div>
+            <div  class="rome-menu">
+                    <div class="rome-points">
+                        <div class="rome-point" data-index="0">
+                            <img src="romebutt.png" class="menu-bg" />
+                            От Республики к Империи
+                        </div>
+                        <div class="rome-point" data-index="1">
+                            <img src="romebutt.png" class="menu-bg" />
+                            Политическая структура Римской империи 
+                        </div>
+                        <div class="rome-point" data-index="2">
+                            <img src="romebutt.png" class="menu-bg" />
+                            Римское право
+                        </div>
+                        <div class="rome-point" data-index="3">
+                            <img src="romebutt.png" class="menu-bg" />
+                            Римская армия
+                        </div>
+                        <div class="rome-point" data-index="4">
+                            <img src="romebutt.png" class="menu-bg" />
+                            Римские дороги
+                        </div>
+                        <div class="rome-point" data-index="5">
+                            <img src="romebutt.png" class="menu-bg" />
+                            Судебная система и апелляция к кесарю
+                        </div>
+                        <div class="rome-point" data-index="6">
+                            <img src="romebutt.png" class="menu-bg" />
+                            Законы, религия и новые движения
+                        </div>
+                        <div class="rome-point" data-index="7">
+                            <img src="romebutt.png" class="menu-bg" />
+                            Cеть городов
+                        </div>
+                       
+                    </div>
+            <div class="rome-svitok">
+                    <img src="rome-sv.png" class="romesv" />
+                    <div class="close-but"></div>
+                    <div class="rome-text svitok-content">
+                            <div class="header">
+                            Селевкия
+                            </div>
+                            <div class="text">
+                                12312312 12 312 3123 123 
+                            </div>
+                    </div>
+                </div>
+                </div>
+                
+                
+                    
+        </div>
+        
+<!-- помощь -->
+            <div class="help-okno-container hide">
+                <div  class="help-okno">
+                    <div class="close-button"></div>
+                    <img src="helpokno.png" class="help-bg" />
+                        <div class="help-text">
+                            «Путь Павла» – это интерактивная карта <br> 
+            про апостола Павла, она работает прокруткой колесика мыши. 
+            <br> В карте содержится информация об апостоле
+            и о Римской империи I века.
+                        </div>
+                </div>
+        </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+
+const romeSvitokContent = [
+    {header:
+            "От&nbsp;Республики к&nbsp;Империи", 
+    text:
+        "Чтобы понять миссию апостола Павла, важно представить себе Римскую империю I&nbsp;века: кто ее&nbsp;возглавлял, как она управлялась и&nbsp;почему она стала идеальной ареной для распространения христианства. Эта история начинается с&nbsp;конца&nbsp;&mdash; с&nbsp;конца Римской республики и&nbsp;превращения ее&nbsp;в&nbsp;империю, которую возглавил человек по&nbsp;имени Октавиан Август.<br /> <br />Римская республика существовала более 450&nbsp;лет. Формально это была система без царя, где народ выбирал магистратов, а&nbsp;законы утверждались Сенатом. Однако к&nbsp;I веку до&nbsp;н.э. система пошатнулась: гражданские войны, амбиции полководцев, коррупция и&nbsp;социальное неравенство разрушали республику изнутри.<br /><br /> Кульминацией стал приход к&nbsp;власти Гая Юлия Цезаря, которого убили в&nbsp;44&nbsp;году до&nbsp;н.э. Его приемный сын Октавиан, будущий император Август, начал игру на&nbsp;выживание&nbsp;&mdash; и&nbsp;выиграл.<br /><br /> В&nbsp;27&nbsp;году до&nbsp;н.э. Октавиан формально вернул власть Сенату, но&nbsp;оставил за&nbsp;собой ключевые рычаги: армию, финансы и&nbsp;провинции. Он&nbsp;получил почетный титул &laquo;Август&raquo; (&laquo;величественный&raquo;), а&nbsp;позже&nbsp;&mdash; &laquo;отец Отечества&raquo;. Так началась эпоха Принципата, в&nbsp;которой император&nbsp;&mdash; &laquo;первый среди равных&raquo; (&laquo;princeps&raquo;)&nbsp;&mdash; держал в&nbsp;руках всю реальную власть.<br /> <br /> К&nbsp;моменту рождения Павла (около 5&ndash;10 года н.э.) империя уже охватывала весь Средиземноморский мир: от&nbsp;Испании до&nbsp;Сирии, от&nbsp;Британии до&nbsp;Египта. Население&nbsp;&mdash; около 60&ndash;80 миллионов человек. Государство поддерживало дороги, почту, военные гарнизоны, публичный порядок и&nbsp;закон.<br /> <br />Август создал не&nbsp;просто политическую форму&nbsp;&mdash; он&nbsp;дал миру &laquo;Пакс Романа&raquo;&nbsp;&mdash; &laquo;Римский мир&raquo;. Это была система относительной стабильности, в&nbsp;которой Евангелие могло пройти из&nbsp;Иерусалима в&nbsp;Рим всего за&nbsp;несколько лет."},
+
+    {header:
+        "Политическая структура Римской империи", 
+    text:
+        "В&nbsp;I&nbsp;веке Римская империя была централизованным государством, в&nbsp;котором власть императора сочеталась с&nbsp;формально сохраняемой республиканской системой. После установления принципата Августом, император стал главой армии, религии и&nbsp;исполнительной власти, хотя Сенат сохранял часть полномочий&nbsp;&mdash; прежде всего в&nbsp;управлении &laquo;сенатскими&raquo; провинциями.<br />Провинции делились на&nbsp;императорские и&nbsp;сенатские. Императорские управлялись легатами или прокуратурами, назначаемыми лично императором. Например, Иудеей в&nbsp;эпоху Павла управлял прокуратор Понтий Пилат. Сенатские провинции контролировались проконсулами. Такая структура позволяла Риму держать под контролем как мирные, так и&nbsp;нестабильные регионы.<br />Саламин стал первым городом, в&nbsp;котором Павел проповедовал после отплытия из&nbsp;Селевкии. Он&nbsp;и&nbsp;Варнава, начали проповедь с&nbsp;местных синагог. <br />О&nbsp;дальнейших событиях в&nbsp;Саламине книга Деяний не&nbsp;рассказывает, только упоминает, что с&nbsp;ними был Иоанн (Марка), который помогал им&nbsp;в&nbsp;служении. Возможно, эта проповедь положила начало первой христианской общине на&nbsp;острове."},
+        
+    {header:
+        "Римское право", 
+    text:
+        "Римское гражданство в&nbsp;I веке&nbsp;&mdash; это особый юридический статус, дававший человеку важные преимущества в&nbsp;пределах огромной империи. Обладать гражданством значило быть защищенным законом, иметь доступ к&nbsp;судам, возможности передвижения и&nbsp;правовой апелляции. <br /><br />Гражданин имел право на&nbsp;справедливое судебное разбирательство, включая защиту от&nbsp;телесных наказаний без суда. Он&nbsp;также мог апеллировать к&nbsp;самому императору, что обеспечивало дополнительную защиту от&nbsp;произвола местных властей.<br /><br />Граждане участвовали в&nbsp;переписях, платили налоги&nbsp;и, в&nbsp;случае неэлиты, могли быть призваны на&nbsp;военную службу. Однако Павел, как гражданин Тарса и&nbsp;представитель диаспоры, был освобожден от&nbsp;этого."},
+
+    {header:
+        "Римская армия", 
+    text:
+        "Римская армия&nbsp;I века была не&nbsp;только военной силой, но&nbsp;и&nbsp;опорой имперской власти в&nbsp;провинциях. Легионы и&nbsp;вспомогательные войска размещались в&nbsp;стратегических точках для защиты границ, подавления восстаний и&nbsp;охраны порядка. В&nbsp;Иудее, например, римский гарнизон в&nbsp;Кесарии и&nbsp;присутствие когорты в&nbsp;Иерусалиме обеспечивали контроль над регионом.<br /><br />Солдаты играли важную роль в&nbsp;строительстве инфраструктуры: они прокладывали дороги, возводили крепости и&nbsp;мосты. Эти дороги не&nbsp;только служили для быстрого передвижения войск, но&nbsp;стали путями распространения христианства.<br /><br />В&nbsp;городах провинций армия становилась фактором стабильности, но&nbsp;и&nbsp;источником напряженности, особенно там, где римская оккупация воспринималась как угроза. Тем не&nbsp;менее, для миссии Павла это означало относительную безопасность, развитую логистику и&nbsp;постоянный контакт с&nbsp;представителями власти."},
+        
+    {header:
+        "Римские дороги", 
+    text:
+        "Фраза &laquo;Все дороги ведут в&nbsp;Рим&raquo; отражала не&nbsp;просто идею централизованной власти, но&nbsp;и&nbsp;реальность уникальной транспортной системы. К&nbsp;I&nbsp;веку н.э. сеть мощеных дорог покрывала около 80 000 км, соединяя столицу с&nbsp;провинциями от&nbsp;Британии до&nbsp;Сирии. Эти дороги строились легионами, были прямыми, прочными и&nbsp;снабжены постами для смены лошадей."},
+
+    {header:
+        "Судебная система и&nbsp;апелляция к&nbsp;кесарю", 
+    text:
+        "Римская судебная система была многоуровневой и&nbsp;отличалась четкой иерархией. В&nbsp;провинциях правосудие осуществляли прокураторы, легаты и&nbsp;проконсулы. Однако римский гражданин имел особое право&nbsp;&mdash; апеллировать к&nbsp;кесарю в&nbsp;случае угрозы несправедливого приговора."},
+
+    {header:
+        "Законы, религия и&nbsp;новые движения", 
+    text:
+        "В&nbsp;I&nbsp;веке римское право допускало существование традиционных религий, особенно древних и&nbsp;&laquo;наследуемых&raquo;, как иудаизм. Иудеи имели особый правовой статус: они были освобождены от&nbsp;императорского культа и&nbsp;могли соблюдать Закон Моисея.<br /><br />Христианство&nbsp;же сначала воспринималось как еврейская секта, но&nbsp;быстро стало вызывать подозрение. Причины&nbsp;&mdash; отказ от&nbsp;поклонения императору, стремительный рост и&nbsp;активная миссия среди язычников. В&nbsp;отличие от&nbsp;иудаизма, христианство не&nbsp;имело древней юридической легитимации и&nbsp;разрушало границы между этносами, что угрожало порядку.<br /><br />Кроме того, собрания христиан происходили в&nbsp;частных домах, что вызывало страх перед тайными сообществами. Рим видел в&nbsp;новом движении потенциальную опасность, и&nbsp;потому отношение к&nbsp;христианам стало быстро меняться&nbsp;&mdash; от&nbsp;настороженности к&nbsp;преследованиям."},
+
+    {header:
+        "Cеть городов", 
+    text:
+        "Римская империя была не&nbsp;просто территорией&nbsp;&mdash; она представляла собой сеть городов, объединенных политически, юридически и&nbsp;экономически. Основными формами были муниципии (города с&nbsp;ограниченным гражданством), колонии (поселения ветеранов с&nbsp;полными правами) и&nbsp;полисы (греческие города с&nbsp;традиционным самоуправлением).<br /><br />Города были центрами управления, торговли и&nbsp;культуры. В&nbsp;них сосредотачивалась власть, армия и&nbsp;суд, там находились синагоги и&nbsp;образованные элиты&nbsp;&mdash; аудитория, с&nbsp;которой взаимодействовал Павел. Он&nbsp;начинал проповедь с&nbsp;синагоги, а&nbsp;затем обращался к&nbsp;язычникам, часто в&nbsp;общественных местах города.<br /><br />Павел путешествовал через Антиохию, Филиппы (колония), Коринф (греко-римский полис), Рим (столица-метрополия), используя структуру городской сети как опору миссии."},
+
+    // {header:
+    //     "333", 
+    // text:
+    //     "3333_22222"},
+
+    // {header:
+    //     "333", 
+    // text:
+    //     "3333_22222"},
+        
+]
+
+document.querySelector(".rome-text .header").innerHTML = romeSvitokContent[0].header
+document.querySelector(".rome-text .text").innerHTML = romeSvitokContent[0].text
+
+const romeButtons = document.querySelectorAll("[data-index]")
+romeButtons.forEach( button => {
+    const index = button.dataset.index
+    button.addEventListener("click", () => {
+        document.querySelector(".rome-text .header").innerHTML = romeSvitokContent[index].header
+        document.querySelector(".rome-text .text").innerHTML = romeSvitokContent[index].text
+    })
+} )
+
+ document.querySelector(".rome-svitok .close-but").addEventListener("click", () => {
+     let menuContainer = document.querySelector(".menu-but")
+document.querySelector(".rome-container").classList.add("hide")
+menuContainer.classList.remove("hide")
+})
+
+ document.querySelector(".rome-svitok .close-but").addEventListener("click", () => {
+     let startContainer = document.querySelector(".buttons")
+document.querySelector(".rome-container").classList.add("hide")
+startContainer.classList.remove("hide")
+})
+
+
+// для открывания окошек
+        let helppic = document.querySelector(".helppic")
+        helppic.addEventListener("click", () => {
+            let helpOknoContainer = document.querySelector(".help-okno-container")
+            let romeOknoContainer = document.querySelector(".rome-container")
+            if(romeOknoContainer.classList.contains("hide")){
+                helpOknoContainer.classList.remove("hide")
+            helpOknoContainer.classList.add("fadein")
+            }
+            
+        })
+
+
+        let romesv = document.querySelector(".unrome2")
+        romesv.addEventListener("click", () => {
+            let romeOknoContainer = document.querySelector(".rome-container")
+            let menuContainer = document.querySelector(".menu-but")
+            let startContainer = document.querySelector(".buttons")
+            let helpOknoContainer = document.querySelector(".help-okno-container")
+            if(helpOknoContainer.classList.contains("hide")){
+                 
+                if(romeOknoContainer.classList.contains("hide")){
+                    romeOknoContainer.classList.remove("hide")
+                    romeOknoContainer.classList.add("fadein")
+                    menuContainer.classList.add("hide")
+                    startContainer.classList.add("hide")
+                   
+                }
+                else 
+                {
+                   
+                    romeOknoContainer.classList.add("hide")
+                    menuContainer.classList.remove("hide")
+                    startContainer.classList.remove("hide")
+                }
+            }
+        })
+
+        let closeBut = document.querySelector(".close-button")
+        closeBut.addEventListener("click", () => {
+            let helpOknoContainer = document.querySelector(".help-okno-container")
+            helpOknoContainer.classList.add("hide")
+            helpOknoContainer.classList.remove("fadein")
+        })
+
+        let closeromeBut = document.querySelector(".closerome-button")
+        closeromeBut.addEventListener("click", () => {
+            let romeOknoContainer = document.querySelector(".rome-container")
+            let menuContainer = document.querySelector(".menu-but")
+            let startContainer = document.querySelector(".buttons")
+            romeOknoContainer.classList.add("hide")
+            romeOknoContainer.classList.remove("fadein")
+            menuContainer.classList.remove("hide")
+            startContainer.classList.remove("hide")
+        })
+
+
+
+
+
+        document.querySelector(".step1 a").addEventListener("click", () => {
+             document.querySelector(".step1").classList.add("hide")
+             document.querySelector(".step2").classList.remove("hide")
+        })
+        document.querySelector(".step2 a").addEventListener("click", () => {
+             document.querySelector(".step2").classList.add("hide")
+             document.querySelector(".step3").classList.remove("hide")
+             Scroller.active = true
+        })
+
+
+
+        if(localStorage.getItem("visited") == "1"){
+            document.querySelector(".step1").classList.add("hide")
+            document.querySelector(".step2").classList.add("hide")
+            document.querySelector(".step3").classList.add("hide")
+            document.querySelector(".step4").classList.remove("hide")
+            document.querySelector("#first").classList.add("hide")
+        }
+
+
+            //нажать ctrl+K для сброса visited
+        document.addEventListener("keydown", e => {
+            if(e.key == "k" && e.ctrlKey) localStorage.removeItem("visited")
+        })
+
+    // Select the button with class "logo"
+const logoButton = document.querySelector('.logo');
+
+if (logoButton) {
+  // Add click event listener to the button
+  logoButton.addEventListener('click', () => {
+    localStorage.removeItem('visited'); // Remove "visited" from local storage
+    location.reload(); // Reload the page
+  });
+}
+
+
+    </script>
+
+
+<script>
+        
+    const smooth = []
+    for(let i = 0; i < 150; i++){
+        smooth.push(i)
+    }
+
+    const step0 = new Step({fps:80,frames:smooth, onUpdate:(frame) => {
+        document.querySelector("#plan1").style.transform = "translateX("+(-frame)+"%)"
+    }})
+
+    const step01 = new Step({fps:80,frames:smooth, onUpdate:(frame) => {
+        document.querySelector("#plan2").style.transform = "translateX("+(frame)+"%)"
+    }})
+
+    const step02 = new Step({fps:40,frames:smooth, onUpdate:(frame) => {
+        document.querySelector("#plan3").style.transform = "translateX("+(frame)+"%)"
+    }})
+
+    const step03 = new Step({fps:150,frames:smooth, onUpdate:(frame) => {
+        document.querySelector("#plan4").style.transform = "translateX("+(frame)+"%)"
+    }})
+
+    const step04 = new Step({fps:50,frames:smooth, onUpdate:(frame) => {
+        document.querySelector("#clouds").style.transform = "translateX("+(-frame)+"%)"
+    }}) 
+
+    const step05 = new Step({fps:150,frames:smooth, onUpdate:(frame) => {
+        document.querySelector("#clouds2").style.transform = "translateX("+(frame)+"%)"
+    }})
+
+    const step06 = new Step({fps:100,frames:smooth, onUpdate:(frame) => {
+        document.querySelector("#clouds3").style.transform = "translateX("+(frame)+"%)"
+    }})
+
+    const step07 = new Step({fps:150,frames:smooth, onUpdate:(frame) => {
+        if(frame > 100){
+            document.querySelector("#fon").style.opacity = 1 - (frame-100)/50
+        }
+    }})
+
+    const step08 = new Step({fps:100,frames:smooth, onUpdate:(frame) => {
+        document.querySelector(".step3").style.opacity = Math.max( 0, 1 - frame/30 )
+
+        if(frame > 140){
+            document.querySelector(".step4").classList.remove("hide")
+            Scroller.active = false
+            localStorage.setItem("visited", "1")
+        }
+    }})
+
+    step0.addChildren(step01)
+    step0.addChildren(step02)
+    step0.addChildren(step03)
+    step0.addChildren(step04)
+    step0.addChildren(step05)
+    step0.addChildren(step06)
+    step0.addChildren(step07)
+    step0.addChildren(step08)
+
+
+    
+    const step1 = new Step({frames:[
+        "путь пунктир000.png",
+        "путь пунктир001.png",
+        "путь пунктир002.png",
+        "путь пунктир003.png",
+        "путь пунктир004.png",
+        "путь пунктир005.png",
+    ], onUpdate:(frame) => {
+        document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/1/" + frame
+    }})
+    const step2 = new Step({frames:[
+        "путь пунктир006.png",
+        "путь пунктир007.png",
+        "путь пунктир008.png",
+        "путь пунктир009.png",
+        "путь пунктир010.png",
+        "путь пунктир011.png",
+        "путь пунктир012.png",
+        "путь пунктир013.png",
+        "путь пунктир014.png",
+    ], onUpdate:(frame) => {
+         document.querySelector("#path1").style.display = "block"
+        document.querySelector("#path1").src = "img/2/" + frame
+    }})
+
+    
+    Scroller.init([step0, step1, step2])
+  
+</script>
+
+
+    <style>
+
+.hide {
+    display: none !important;
+}
+
+.fadein {
+    animation: fadein 0.5s linear forwards;
+}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+        body{
+            margin:0;
+        }
+        .main-container{
+            width: 100vw;
+            height: 100vh;
+            font-family: Atyp Text;
+        }
+
+        .container-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.3537vw;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            flex-direction: column;
+            margin-top: -5vw;
+            font-family: Cera Pro;
+        }
+
+        .link-button{
+            position: relative;
+            z-index: 1;
+            width: 8.64583333333333vw;
+            height: 4.16666666666667vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:rgb(251, 250, 243);
+            text-decoration:none;
+            color: black;
+            font-size: 1,04166666666667vw;
+        }
+
+        .logotype{
+            height: 9.50625vw;
+        }
+
+        .logo{
+            height: 5vw;
+            position: absolute;
+            left:0;
+            top:0;
+            padding-left: 3.0729vw;
+            padding-top: 3.0729vw;
+            padding-bottom: 3.0729vw;
+            cursor: pointer;
+
+        }
+
+        .navigator{
+            position: absolute;
+            height: 100vh;
+            right:0;
+            top:0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 3.0729vw;
+            padding-top: 3.0729vw;
+            padding-bottom: 3.0729vw;
+            box-sizing: border-box;
+        }
+        .unrome2{
+            height: 5vw;
+            cursor: pointer;
+            position: relative;
+            z-index:100;
+        }
+
+
+
+        /* свиток с римом вот отсюда */
+        
+        .rome-menu{
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: flex-end;
+            top: 0;
+            /* top: 50%;
+           transform: translate(-50%, -50%); */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-right: 4vw;
+            gap: 5vw;
+            z-index: 100;
+            box-sizing: border-box;
+            
+        }
+
+        .rome-points{
+            display: flex;
+            flex-direction: column;
+            gap: 2vw;
+        }
+
+        .rome-point{
+            display: flex;
+            position: relative;
+            justify-content:center;
+            align-items: center;
+            text-decoration:none;
+            color: black;
+            font-family: Atyp Text;
+            font-size: 1.04166666666667vw;
+            height: 3.6vw;
+            cursor: pointer;
+        }
+
+        .romesv{
+             position: absolute;
+            left:0;
+            top:0;
+            object-fit: cover;
+            z-index: -1;
+            height: 46vw;
+        }
+
+         .rome-svitok{
+            top: 2vw;
+            width: 34.2vw;
+            height: 50.73vw;
+            position: relative;
+        }
+
+        .svitok-content{
+            position: absolute;
+            padding-top: 3vw;
+            padding-left: 1.92vw;
+            padding-right:  12.92vw;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            box-sizing: border-box;
+            
+            
+        }
+
+        .svitok-content .text{
+            position: relative;
+            height: 33vw;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            padding-bottom: 2rem;
+            box-sizing: border-box;
+        }
+        .svitok-content .text::-webkit-scrollbar{
+            display: none;
+        }
+
+
+        .svitok-content::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 3vw;
+            left: 1.92vw;
+            right: 12.92vw;
+            bottom:-0.5vw;
+            background:linear-gradient(to bottom, rgba(251, 250, 243, 0), rgba(251, 250, 243, 1));
+        }
+        .header{
+            font-family: Cera pro;
+            font-size: 2.083vw;
+            font-weight: bold;
+        }
+        .text{
+            font-family: Atyp text;
+            font-size: 0.83333vw;
+        }
+
+        .closerome-button{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            top: 10.9vw;
+            right: 16.5vw;
+            z-index: 1000;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .close-but{
+            width: 2vw;
+            height: 2vw;
+            background-color: red;
+            position: absolute;
+            right:9.3vw;
+            top:2vw;
+            opacity: 0;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+
+        /* до сюда */
+
+        .helppic{
+            height: 3.33vw;
+            cursor: pointer;
+        }
+
+        .help-okno{
+            position: absolute;
+            display: flex;
+            right: 0;
+            padding-right: 8.5vw;
+            bottom: 2vw;
+            font-family: Atyp Text;
+        }
+
+        .close-button{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            top: 1.8vw;
+            right: 9.15vw;
+            z-index: 10;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .help-bg{
+            position: absolute;
+            display: flex;
+            height: 13.4078125vw;
+            object-fit: cover;
+            
+        }
+
+       
+
+        .help-text{
+            width: 23.95vw;
+            margin: 2.86vw;
+            font-size: 1,04166666666667vw;
+            position: relative;
+        }
+
+         /* 2 экран */
+
+         .buttons2 {
+           
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           left:50%;
+           top: 50%;
+           transform: translate(-50%, -50%);
+           display: flex;
+           flex-direction: column;
+           gap: 5vw;
+           justify-content:center;
+           align-items: center;
+       }
+
+         .scroll1{
+            height: 14.1557291666667vw;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .q1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .q1-text{
+            font-size: 1.04166666666667vw;
+            padding-top: 4vw;
+            position: relative;
+            text-decoration:none;
+            color: black;
+            text-align: center;
+            width: 22.65625vw;   
+        }
+
+        
+        
+/* 3 экран */
+
+        .q2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scroll2{
+            height: 11.2432291666667vw;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .q2-text{
+            font-size: 1.04166666666667vw;
+            padding-top: 4.9vw;
+            position: relative;
+            text-decoration:none;
+            color: black;
+            text-align: center;
+            width: 22.65625vw;   
+        }
+        .start3{
+            left:0;
+            top:0;
+            text-decoration:none;
+            color: black;
+            font-size: 1,04166666666667vw;    
+        }
+
+        .link-button2{
+            position: relative;
+            z-index: 1;
+            width: 11.7708333333333vw;
+            height: 4.16666666666667vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:rgb(251, 250, 243);
+        }
+
+        .mouse{
+            width: 5.93072916666667vw;
+
+        }
+        .scene {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100vw;
+            height:100vh;
+        }
+
+        .fill {
+            width:100vw;
+            height:100vh;
+            object-fit: cover;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+
+
+
+/* menu  */
+
+        .menu{
+            display: flex;
+            width: 100%;
+           height: 100%;
+           position: absolute;
+           left:50%;
+           top: 50%;
+           transform: translate(-50%, -50%);
+           justify-content:center;
+           align-items: center;
+        }
+        .menu-but{
+           display: flex;
+           flex-direction: column;
+           z-index: 1;
+           gap: 5vw;
+        }
+
+        .menu-bg{
+            width: 26vw;
+            z-index: -1;
+            object-fit: cover;
+            position: absolute;
+
+        }
+
+        .menu-text{
+            
+            display: flex;
+            position: relative;
+            justify-content:center;
+            align-items: center;
+            text-decoration:none;
+            color: black;
+            font-family: Atyp Text;
+            font-size: 1.04166666666667vw;
+        }
+
+
+    </style>
+
+
+</body>
+</html>
