@@ -6,4 +6,11 @@
 @font-face {
     font-family: Cera;
     src: url(fonts/CeraPro-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Cera;
+    src: url(fonts/CeraPro-Regular.ttf);
+    font-weight:normal;
 }
