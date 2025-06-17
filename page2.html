@@ -489,10 +489,17 @@ if (logoButton) {
         body{
             margin:0;
             position: fixed;
+            left:0;
+            top:0;
+            bottom:0;
+            right:0;
         }
         .main-container{
-            width: 100vw;
-            height: 100vh;
+            position: absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            right:0;
             font-family: Atyp;
         }
 
@@ -848,17 +855,18 @@ if (logoButton) {
             position:fixed;
             top:0;
             left:0;
-            width:100vw;
-            height:100vh;
+            right:0;
+            bottom:0;
         }
 
         .fill {
-            width:100vw;
-            height:100vh;
+            
             object-fit: cover;
             position: absolute;
             top:0;
             left:0;
+            right:0;
+            bottom: 0;
         }
 
 
