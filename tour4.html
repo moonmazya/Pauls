@@ -9,11 +9,11 @@
 </head>
 <body>
 
-     <div class="buttons2 step1 hide">
+     <div class="buttons2 step1">
         <div class="q2">
             <img src="scroll 1.png" class="scroll2" />
             <div class="q2-text">
-                   Деян.18:23-21:16, 52-58 гг.. <br/>Третье миссионерское путешествие <br/> с Тимофеем и другими. 
+                   Деян.21:17-28:30, 58-63 гг.. <br/> Путешествие в&nbsp;Рим <br/>
             </div>
         </div>
         <div>
@@ -112,18 +112,21 @@
             document.querySelector(".cloudanim").style.display = "block"
         }
     }})
+
+
        const smooth = []
-    for(let i = 0; i < 150; i++){
+    for(let i = 0; i < 40; i++){
         smooth.push(i)
     }
     const step1 = new Step({fps:100,frames:smooth, onUpdate:(frame) => {
         document.querySelector(".step1").style.opacity = Math.max( 0, 1 - frame/30 )
 
-        if(frame > 140){
-            //document.querySelector(".step1").classList.remove("hide")
+        if(frame > 30){
+            document.querySelector(".step1").classList.add("hide")
            // Scroller.active = false
             localStorage.setItem("visited", "1")
         }
+
     }})
 
     step0.addChildren(step1)
@@ -468,8 +471,9 @@
         "00.png",
         "01.png",
         "02.png",
-    ], onUpdate:(frame) => {
-        setContent(0)
+    ],  onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(0)
+        if(isLast) setContent(1)
         document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.1/" + frame
 
@@ -484,8 +488,8 @@
         "05.png",
         "06.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-        if(isFirst) setContent(0)
-        if(isLast) setContent(1)
+        if(isFirst) setContent(1)
+        if(isLast) setContent(2)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.2/" + frame
     }})
@@ -510,8 +514,8 @@
         "016.png",
         "017.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-          if(isFirst) setContent(1)
-          if(isLast) setContent(2)
+          if(isFirst) setContent(2)
+          if(isLast) setContent(3)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.3/" + frame
     }})
@@ -556,8 +560,8 @@
         "036.png",
         "037.png",
     ],onUpdate:(frame, isFirst, isLast) => {
-         if(isFirst) setContent(2)
-          if(isLast) setContent(3)
+         if(isFirst) setContent(3)
+          if(isLast) setContent(4)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.4/" + frame
     }})
@@ -588,8 +592,8 @@
         "022.png",
         "023.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-         if(isFirst) setContent(3)
-          if(isLast) setContent(4)
+         if(isFirst) setContent(4)
+          if(isLast) setContent(5)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.5/" + frame
     }})
@@ -619,8 +623,8 @@
         "022.png",
         "023.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-         if(isFirst) setContent(4)
-          if(isLast) setContent(5)
+         if(isFirst) setContent(5)
+          if(isLast) setContent(6)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.6/" + frame
     }})
@@ -671,8 +675,8 @@
         "043.png",
         "044.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-        if(isFirst) setContent(5)
-        if(isLast) setContent(6)
+        if(isFirst) setContent(6)
+        if(isLast) setContent(7)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.7/" + frame
     }})
@@ -700,8 +704,8 @@
         "019.png",
         "020.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-        if(isFirst) setContent(6)
-        if(isLast) setContent(7)
+        if(isFirst) setContent(7)
+        if(isLast) setContent(8)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.8/" + frame
     }})
@@ -721,8 +725,8 @@
         "путь рим011.png",
         "путь рим012.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-        if(isFirst) setContent(7)
-        if(isLast) setContent(8)
+        if(isFirst) setContent(8)
+        if(isLast) setContent(9)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.9/" + frame
     }})
@@ -750,8 +754,8 @@
         "019.png",
         "020.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-        if(isFirst) setContent(8)
-        if(isLast) setContent(9)
+        if(isFirst) setContent(9)
+        if(isLast) setContent(10)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.10/" + frame
     }})
@@ -769,8 +773,8 @@
         "009.png",
         "010.png",
     ], onUpdate:(frame, isFirst, isLast) => {
-        if(isFirst) setContent(9)
-        if(isLast) setContent(10)
+        if(isFirst) setContent(10)
+        if(isLast) setContent(11)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/4.11/" + frame
     }})
@@ -1000,13 +1004,14 @@
 
         .svitok-content{
             position: absolute;
-            padding-top: 7.92vw;
+            padding-top: 5vw;
             padding-left: 7.92vw;
             padding-right:  7.92vw;
+            height:42vw;
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 5px;
             box-sizing: border-box;
             
             
@@ -1014,7 +1019,9 @@
 
         .svitok-content .text{
             position: relative;
-            height: 27vw;
+            display: flex;
+            flex-direction: column;
+            /* height:35vw; */
             overflow-y: scroll;
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */

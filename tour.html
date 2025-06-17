@@ -13,8 +13,8 @@
         <div class="q2">
             <img src="scroll 1.png" class="scroll2" />
             <div class="q2-text">
-                   Деян.15:36-18:22, 50-52 гг.. <br/>
-Второе миссионерское путешествие, <br/>с Силой и Тимофеем
+                   Деян.13-14, 45-49&nbsp;гг.. <br/> Первое миссионерское путешествие <br/>
+с&nbsp;Варнавой и&nbsp;Иоанном,<br/> прозванным Марком
             </div>
         </div>
         <div>
@@ -1014,7 +1014,7 @@
         "путь пунктир156.png",
     ], onUpdate:(frame, isFirst, isLast) => {
         if(isFirst) setContent(14)
-        // if(isLast) setContent(15)
+        if(isLast) setContent(15)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/15/" + frame
     }})
@@ -1089,7 +1089,7 @@
             align-items: center;
         }
         .q2-text{
-            font-size: 1.04166666666667vw;
+            font-size: 1vw;
             padding-top: 4vw;
             position: relative;
             text-decoration:none;
@@ -1246,6 +1246,7 @@
             padding-top: 5vw;
             padding-left: 7.92vw;
             padding-right:  7.92vw;
+            height:42vw;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -1257,7 +1258,9 @@
 
         .svitok-content .text{
             position: relative;
-            height: 31vw;
+            display: flex;
+            flex-direction: column;
+            /* height:35vw; */
             overflow-y: scroll;
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
@@ -1287,6 +1290,7 @@
         .text{
             font-family: Atyp;
             font-size: 0.83333vw;
+            flex: 1;
         }
 
         .town:hover, .paul:hover, .rome:hover{
