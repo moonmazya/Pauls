@@ -43,10 +43,10 @@
             </div>
             <div class="zoom">
                 <div>
-                    <img src="minus.png" class="zoom-pic"/>
+                    <img src="minus.png" class="zoom-pic minus"/>
                 </div>
                 <div>
-                    <img src="plus.png" class="zoom-pic"/>
+                    <img src="plus.png" class="zoom-pic plus"/>
                 </div>
         </div>
         </div>
@@ -90,7 +90,14 @@
 
     <script>
            
-
+    document.querySelector(".plus").addEventListener("click", () => {
+        document.querySelector(".scene").classList.add("zoom")
+        document.querySelector(".container-bg").classList.add("zoom")
+    })
+    document.querySelector(".minus").addEventListener("click", () => {
+        document.querySelector(".scene").classList.remove("zoom")
+        document.querySelector(".container-bg").classList.remove("zoom")
+    })
 
   const step0 = new Step({frames:[
         "cloud100.png",
@@ -1074,6 +1081,14 @@
             position: absolute;
             top:0;
             left:0;
+        }
+
+        .scene, .container-bg{
+            transition-duration: 300ms;
+        }
+
+        .scene.zoom, .container-bg.zoom {
+            transform: scale(1.5);
         }
     </style>
 
