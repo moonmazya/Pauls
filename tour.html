@@ -21,7 +21,7 @@
 </div>  
 
     <div class="main-container">
-        <img src="map1.png" class="container-bg" />
+        <img src="map1.jpg" class="container-bg" />
 
         <div class="buttons">
             <div class="link-button">
@@ -213,10 +213,11 @@
 ]
 
         let allSvitokHeaders = [
+            // 1 заголовки
              [
                 `Антиохия в&nbsp;Сирии`,
                 `Апостол Павел`,
-                `Политическая структура Римской империи в I веке
+                `Политическая структура Римской империи
 `,
             ],
             // 2 заголовки
@@ -381,8 +382,9 @@
         "путь пунктир608.png",
         "путь пунктир609.png",
         "путь пунктир610.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(5)
+        if(isLast) setContent(6)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/6/" + frame
     }})
@@ -392,8 +394,9 @@
         "путь пунктир71.png",
         "путь пунктир72.png",
         "путь пунктир73.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(5)
+        if(isLast) setContent(6)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/7/" + frame
     }})
@@ -409,8 +412,9 @@
         "путь пунктир807.png",
         "путь пунктир808.png",
         "путь пунктир809.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(6)
+        if(isLast) setContent(7)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/8/" + frame
     }})
@@ -425,8 +429,9 @@
         "путь пунктир96.png",
         "путь пунктир97.png",
         "путь пунктир98.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(6)
+        if(isLast) setContent(7)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/9/" + frame
     }})
@@ -437,8 +442,9 @@
         "путь пунктир12.png",
         "путь пунктир13.png",
         "путь пунктир14.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(7)
+        if(isLast) setContent(8)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/10/" + frame
     }})
@@ -455,8 +461,9 @@
         "путь пунктир1108.png",
         "путь пунктир1109.png",
         "путь пунктир1110.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(8)
+        if(isLast) setContent(9)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/11/" + frame
     }})
@@ -477,8 +484,9 @@
         "путь пунктир1212.png",
         "путь пунктир1213.png",
         "путь пунктир1214.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(9)
+        if(isLast) setContent(10)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/12/" + frame
     }})
@@ -492,8 +500,9 @@
         "путь пунктир134.png",
         "путь пунктир135.png",
         "путь пунктир136.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(10)
+        if(isLast) setContent(11)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/13/" + frame
     }})
@@ -533,8 +542,9 @@
         "путь пунктир1430.png",
         "путь пунктир1431.png",
         "путь пунктир1432.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(11)
+        if(isLast) setContent(12)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/14/" + frame
     }})    
@@ -548,8 +558,9 @@
         "путь пунктир154.png",
         "путь пунктир155.png",
         "путь пунктир156.png",
-    ], onUpdate:(frame) => {
-         setContent(1)
+    ], onUpdate:(frame, isFirst, isLast) => {
+        if(isFirst) setContent(11)
+        if(isLast) setContent(12)
          document.querySelector("#path1").style.display = "block"
         document.querySelector("#path1").src = "img/15/" + frame
     }})
@@ -745,7 +756,7 @@
 
         .svitok-content .text{
             position: relative;
-            height: 27vw;
+            height: 31vw;
             overflow-y: scroll;
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
